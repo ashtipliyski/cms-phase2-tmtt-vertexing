@@ -46,7 +46,7 @@ public:
   ///Number of reconstructed tracks
   unsigned int totalNoTracks()              const{return fitTracks_.size();}
   /// Reconstructed Primary Vertex
-  RecoVertex  PrimaryVertex()               const {if(pv_index_ < vertices_.size()) return vertices_[pv_index_]; else{ std::cout << "No Primary Vertex has been found."; return RecoVertex();} }
+  RecoVertex  PrimaryVertex()               const {if(pv_index_ < vertices_.size()) return vertices_[pv_index_]; else{ std::cout << "No Primary Vertex has been found." << std::endl; return RecoVertex();} }
   /// Reconstructed Primary Vertex as in TDR
   RecoVertex  TDRPrimaryVertex()            const {return tdr_vertex_;}
   /// Reconstructed Primary Vertex Id
