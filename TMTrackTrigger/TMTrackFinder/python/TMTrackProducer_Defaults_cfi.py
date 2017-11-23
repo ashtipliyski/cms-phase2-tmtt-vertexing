@@ -398,7 +398,7 @@ TMTrackProducer = cms.EDProducer('TMTrackProducer',
   ),
 # === Vertex Reconstruction configuration
   VertexReconstruction=cms.PSet(
-        # Vertex Reconstruction Id (0: GapClustering, 1: SimpleMergeClustering, 2: DBSCAN, 3: PVR, 4: AdaptiveVertexReconstruction, 5: HPV, 6: TP Binning)
+        # Vertex Reconstruction Id (0: GapClustering, 1: SimpleMergeClustering, 2: DBSCAN, 3: PVR, 4: AdaptiveVertexReconstruction, 5: HPV)
         AlgorithmId = cms.uint32(2),
         # Minimum distance of tracks to belong to same recovertex [cm]
         VertexResolution = cms.double(.15),
