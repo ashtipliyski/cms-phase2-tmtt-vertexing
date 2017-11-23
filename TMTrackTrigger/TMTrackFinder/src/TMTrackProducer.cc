@@ -275,8 +275,9 @@ void TMTrackProducer::produce(edm::Event& iEvent, const edm::EventSetup& iSetup)
         fitTracks.push_back(pTrack);
       }
     }
-    
+
     VertexFinder vf(fitTracks, settings_);
+
     if(settings_->vx_algoId() == 0){
       cout << "Finding vertices using a gap clustering algorithm "<< endl;
       vf.GapClustering();
@@ -309,7 +310,7 @@ void TMTrackProducer::produce(edm::Event& iEvent, const edm::EventSetup& iSetup)
       cout << "Reconstructed Primary Vertex z0 "<<vf.PrimaryVertex().z0() << " pT "<< vf.PrimaryVertex().pT() << endl;
     }
     //=== Fill histograms studying vertex reconstruction performance
-    hists_->fillVertexReconstruction(inputData, vf);    
+    hists_->fillVertexReconstruction(inputData, vf);
   }
 
 
@@ -323,7 +324,7 @@ void TMTrackProducer::produce(edm::Event& iEvent, const edm::EventSetup& iSetup)
 }
 
 
-void TMTrackProducer::endJob() 
+void TMTrackProducer::endJob()
 {
   hists_->endJobAnalysis();
 
